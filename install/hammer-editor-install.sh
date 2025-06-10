@@ -37,7 +37,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/opt/hammer-editor/
-ExecStart=/opt/hammer-editor/desktop/run.sh
+ExecStart=/opt/hammer-editor/bin/server
 Restart=always
 
 [Install]
