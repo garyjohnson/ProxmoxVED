@@ -25,7 +25,7 @@ unzip -q "${RELEASE}.zip"
 if [[ "${RELEASE}" == v* ]]; then
   RELEASE="${RELEASE:1}"
 fi
-mv "server/" "/opt/hammer-editor"
+mv "server-2/" "/opt/hammer-editor"
 echo "${RELEASE}" >"/opt/hammer-editor_version.txt"
 msg_ok "Installed hammer-editor"
 
