@@ -19,13 +19,13 @@ msg_ok "Installed Dependencies"
 
 msg_info "Installing hammer-editor"
 RELEASE=$(curl -fsSL https://api.github.com/repos/Wavesonics/hammer-editor/releases/latest | grep "tag_name" | awk '{print substr($2, 2, length($2)-3) }')
-curl -fsSL -o "${RELEASE}.zip" "https://github.com/Wavesonics/hammer-editor/releases/download/${RELEASE}/server.zip"
+curl -fsSL -o "${RELEASE}.zip" "https://github.com/Wavesonics/hammer-editor/releases/download/v${RELEASE}/server.zip"
 unzip -q "${RELEASE}.zip"
 # Remove the v prefix to RELEASE if it exists
 if [[ "${RELEASE}" == v* ]]; then
   RELEASE="${RELEASE:1}"
 fi
-mv "hammer-editor-${RELEASE}/" "/opt/hammer-editor"
+mv "server/" "/opt/hammer-editor"
 echo "${RELEASE}" >"/opt/hammer-editor_version.txt"
 msg_ok "Installed hammer-editor"
 
