@@ -42,7 +42,7 @@ function update_script() {
     msg_info "Updating $APP to v${RELEASE}"
     curl -fsSL -o "${RELEASE}.zip" "https://github.com/Wavesonics/hammer-editor/releases/download/v${RELEASE}/server.zip"
     unzip -q "${RELEASE}.zip"
-    mv "hammer-editor-${RELEASE}/" "/opt/hammer-editor"
+    mv "server-2/" "/opt/hammer-editor"
     rm -f "${RELEASE}.zip"
     msg_ok "Updated $APP to v${RELEASE}"
 
